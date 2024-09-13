@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Lucky Btn</title>
-    <link rel="stylesheet" href="./style.css?ver=4">
+    <link rel="stylesheet" href="./style.css?ver=5">
 </head>
 
 <body>
     
     <div class="screen-game">
+        <a class="link hidden" href="{offer_link}"></a>
         <audio id="sound" src="./sound.mp3" preload="auto"></audio>
         <div class="gif-win hidden">
 
@@ -26,7 +27,7 @@
                 money or another prize!
                 <br><br>
 
-                Spin the wheel to try your luck!
+                Click button to try your luck!
             </div>
             <div class="second-info hidden">
                 <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -81,11 +82,15 @@
         <div class="container-game">
             
             <div class="red-text shadow-text">
-                YOU HAVE CHANCE TO <br> WIN 100.000 RS <br>Just SPIN And TRY YOUR LUCKY
+                YOU HAVE CHANCE TO <br> WIN 100.000 RS <br>Just CLICK BUTTON And TRY YOUR LUCKY
+            </div>
+            <div class="result-container">
+                <div class="">RESULT:</div>
+                <div class="result-coin">3</div>
             </div>
             <div class="wheel-container">
                 
-                <div class="button-container anim">
+                <div class="button-container">
                     <div class="button"></div>
                 </div>
                 
@@ -104,7 +109,7 @@
     </div>
 
 
-    <script src="./script.js"></script>
+    <script src="./script.js?ver=5"></script>
 </body>
 
 </html>

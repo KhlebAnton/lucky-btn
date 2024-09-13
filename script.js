@@ -5,24 +5,30 @@ const bannerInfo = document.querySelector('.banner-info');
 const secondInfo = document.querySelector('.second-info');
 const winInfo = document.querySelector('.wins-info');
 
+const btnContainer = document.querySelector('.button-container');
+
 ///href btn get money
 function getMoney() {
-    window.location.href = '{offer_link}'
+    document.querySelector('.link').classList.remove('hidden')
 }
 // btn.addEventListener('click', ()=> {setFirstSpin()});
 bannerInfo.addEventListener('click', setFirstSpin);
 function setFirstSpin() {
+    startResult()
+    btnContainer.classList.add('anim');
     bannerInfo.removeEventListener('click', setFirstSpin);
     startInfo.classList.add('hidden');
     setTimeout(() => {
         document.getElementById('spin-count').textContent = 2;
         bannerInfo.addEventListener('click', setSecondSpin);
-        secondInfo.classList.remove('hidden')
+        secondInfo.classList.remove('hidden');
+        btnContainer.classList.remove('anim');
     }, 3500);
 };
 function setSecondSpin() {
+    startResult()
     bannerInfo.removeEventListener('click', setSecondSpin);;
-    
+    btnContainer.classList.add('anim');
     secondInfo.classList.add('hidden');
     setTimeout(() => {
         winInfo.classList.remove('hidden');
@@ -30,7 +36,7 @@ function setSecondSpin() {
         document.getElementById('attacment').style.opacity = '0';
         document.querySelector('.gif-win').classList.remove('hidden')
         btn.innerHTML= 'Get money'
-        bannerInfo.addEventListener('click', getMoney);
+        getMoney();
         document.getElementById('sound').play();
     }, 3500);
 };
@@ -109,4 +115,23 @@ function startTimer() {
 
 function stopTimer() {
     clearInterval(timerId);
+}
+
+const resultCoin = document.querySelector('.result-coin');
+let intervalResult;
+function setCoinResult() {
+    let coin = resultCoin.innerText;
+    if(coin != 0) {
+        coin--;
+    } else {
+        coin = 3;
+        stopResult();
+    }
+    resultCoin.innerHTML = coin;
+}
+function startResult() {
+    intervalResult = setInterval(setCoinResult,1000)
+}
+function stopResult() {
+    clearInterval(intervalResult)
 }
