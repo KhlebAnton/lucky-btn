@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Lucky Btn</title>
+    <link rel="stylesheet" href="./style.css?ver=3">
+</head>
+
+<body>
+    
+    <div class="screen-game">
+        <audio id="sound" src="./sound.mp3" preload="auto"></audio>
+        <div class="gif-win hidden">
+
+        </div>
+        <div class="banner-info">
+            <div class="start-info">
+                Congratulations!🎉 <br>
+                You've made it to the list of <br> participants!
+                <br>
+                <br>
+                Every day we raffle off 500 prizes,<br> worth from $10 to $1000. <br>You can try your luck and take the
+                <br>
+                money or another prize!
+                <br><br>
+
+                Spin the wheel to try your luck!
+            </div>
+            <div class="second-info hidden">
+                <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="90" height="90" fill="url(#pattern0_20_77)" />
+                    <defs>
+                        <pattern id="pattern0_20_77" patternContentUnits="objectBoundingBox" width="1" height="1">
+                            <use xlink:href="#image0_20_77" transform="scale(0.00520833)" />
+                        </pattern>
+                        <image id="image0_20_77" width="192" height="192"
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAF0GlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4xLWMwMDAgNzkuYjBmOGJlOTAsIDIwMjEvMTIvMTUtMjE6MjU6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0RXZ0PSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VFdmVudCMiIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMy4yIChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyNC0wOS0wN1QwMTo1NjowNyswMzowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyNC0wOS0wN1QwMTo1NjowNyswMzowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjQtMDktMDdUMDE6NTY6MDcrMDM6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODFmNDgxOGEtZjViZi00OWJkLTg0ZWMtNzkxOGNhZGRmMGEwIiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6ZDdmYzU4ZWMtNDJiMy03ZjQ1LTg0ZDAtOTFhNjE0MTY0ODYwIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6ZGRhNDcwMTktNmEyZS00MGQzLTk3OTAtY2NhZDMzYmQ2YmE4IiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyI+IDx4bXBNTTpIaXN0b3J5PiA8cmRmOlNlcT4gPHJkZjpsaSBzdEV2dDphY3Rpb249ImNyZWF0ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ZGRhNDcwMTktNmEyZS00MGQzLTk3OTAtY2NhZDMzYmQ2YmE4IiBzdEV2dDp3aGVuPSIyMDI0LTA5LTA3VDAxOjU2OjA3KzAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMiAoTWFjaW50b3NoKSIvPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0ic2F2ZWQiIHN0RXZ0Omluc3RhbmNlSUQ9InhtcC5paWQ6ODFmNDgxOGEtZjViZi00OWJkLTg0ZWMtNzkxOGNhZGRmMGEwIiBzdEV2dDp3aGVuPSIyMDI0LTA5LTA3VDAxOjU2OjA3KzAzOjAwIiBzdEV2dDpzb2Z0d2FyZUFnZW50PSJBZG9iZSBQaG90b3Nob3AgMjMuMiAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4JSvKiAAAKkklEQVR42u2de5CVZQGHXwyRLgpDTonFxYZGx4hL4QWnRXRNblm6YBrNdBklYcX8wxkHLG0Qi0ynkmlaIS/dr06Q7RozrWmKWkYIiAgu0W7conXYAoIBg6c/vo/hsJ7d/c453+W9/J6Z91/mfO/7POw53+X9DGA0UhmDgLHAVGAOcC/wU6AZeBZYB2wFdsZjR5mxC/gbsB54DmiJ/437gJuAacB4YLDmO52hSah8fBBoABqBe4AVwCZgP/lxANgMPA58FZgPzIoDPEVrpADSGv1jqeYDPwPasZ/twC+BW4EPAadqHRVAJWNi/D/78/FXFdfZBbwQfyWbpPVVAN1HP+AC4Mvxd2/f2QgsAi4CBiiAcA/+POABoINw2QU0AeMUQBhjMHAb8ASiO78HFgJDFYB/Y3T8Z3+vPO+TQ8A3Qvmr4PsB1gOtcrpqVsfXNRSAY2NmfAFKpEMrcL0CsH9MBv4kXzPjJeBKBWDfmAQ8KT9z4xlgigIofgwH7pePhdEEnKsAihlz4zMWoliOAbcrgPzGhcBKeWflD+UrFUC24xZ5Zj13KYD0x0ii++OFG7wCjFEA6YxG4D9yyjmOAncqgNpGkzxynl8BpymAysYIYIPc8Ya/Ez3KqQASjAbyfbywSExgIdyoAHofCwIS3wQYAMC3FUD58UiA8ocYAES7XfRXACfGY4HKH2oAEG0VMyT0AN4enzMOUfzQAwB4HRgVagCjJH/wAQB0AleEFsC7gX8FLr4COJmJoQQwFOiS+AqgDJN9D+Acom0EJb8CKMdBcn7QJk/534nfF7iMAkiNi30LYBjR7scSXwEk4ShwqS8BDAK2SH4FUCH7gfN9CKBN8iuAKjlMxvuXZi3/byS+AqiRNcBbXQzgh5JfAaTEH10LYIHEVwAp811XApgh8RVARsyxPYCzgSOSXwFkyDibA9gq+RVAxnTZGsByya8AcuJ3tgVwg8RXADnzFVsCeA/RTUwSXwHkyTGi18AWHsDLkl+BFERn0QHMl/yKo2DuLyqAcRJfMVjCZUUE8JzkVwiW0JZ3AJ+T+IrBh7NC1UzqmZJfIVjKyDwCWC75FYKlrMg6gAskvkKwnKlZBrBW8isCn34QVzJhYyW/InCEK7IIwJX9fCS2QthNwmeJk07QFJ35UQSO8ek0A3jS0UmQ2OFG8GpaAVzo+ERI7HAj+FQaAazxZDIkd3gRvF5rAO/18LuhBA8rgotrCeBrnp4mk+DhRLCq2gAGAv/z+FyxBA8ngjHVBHArYSDJ/Y/gW9UE8CzhIMn9jmBLpQEMI0wkur8RTKokgKWEiy1SKYJ0aUkawFvw+1VGtkXg4l8mV3lHkgBGI/IUz8Wvaq5SlySAL8n7XGVDEeTG0iQBtMv5XGVz+Ye7a3T1FcAEuZ67bK6fwXKNKb0FcJ8cz10010/jusajvQXwovzOXTbXz2K5FsGm3gLolNe5y4YHEbjEQUreOll6EB+Qy4XIhiLInWnlAviiPC5ENjyJwCWWlgvgMTlciGwogtzZWC6APfK3EOHwKAKXGF4awBg5W5h0PgXgUgRXlwZwrVwtTDw8i8AVbioNYK48LUw8PIvAFRaVBrBYjhYmH4qgEFaUBvBruVmYfAqgGLaWBrBJXhYmIR5G4ALHgDMN0VMyB+VjYRIqgOK4yJV9/4UiyILZBrhKHiiAQAO4wwCN8kABBBpBkwHukQeKINAAml177alQAGmy2gAr5YAiCDSAtQZ4WuuvAAIN4FUDrNf6K4BAA9hmiF4sLBRAiAHsNECH1l8BBBrAHu0EIUIOYK8BDmj9FUCgAew3wD6tvwIINIB9CkAEH8B/tf4KIOSvQJ2BLpBQAF0G2K4AFAABnwbdpgAUQKBzvMsAGxSAAgh0jtsNsFoBKIBA53izAX6rABRAoHO8zgAPKwAFEOgcP2+AJVogBRDo/K5y5cUYCkDzmwXfM8A1WiDJH+j83mWADysABRDo/H7WAIOBw1okyR/g3H7k+AdtC3ixFEC483rW8Q/brMWS/IHNaQcl26N/XQEogMDmtKU0gJu1aJI/sLlcUhrA9Vo4BRDYXDaWBjBBCxdMBHpTZMSs0gD6AXu1gEFEoAAiRtHtTfHNWkDvA5D8EVuPf97SD367FtHrCPSm+BMsKxfAeC2mtxEYBXASM8sFoN8BfkYg+U/mMHBGuQAMsFYL61UEkv/NvFb6ubsfxANaXG8iMJqjsvy4twAu0SJ7EYFRAD3y8d4CMMBuLbTTiyz5e+YAcEpfASzW/3ZOLraR/MlPf/YWwHgF4NzCG81DIi5PEsAA4IgicEIAI/krYlCSAAzwiAKwWgRjyXCJp8odQ08Hdp5O+1kphZH8VTOjkgAM8BdFULgoxsNjKoL2no6lt4NciJsYDQXQjQerCWCIAtDAj6viddUEYIAmRaDhuPwv9HZMfR3w+3EXCSv5AeprCcCVTbMUgeQvx6G+ji3JwdfjNhI43NvB56URgAFeVASS3zG2JznGpBPRgPtI6LCehpubZgD944sJikDyu8C/gdPTDMDE51JRBJLfARqSHm+lk7MZf5Dsfsq/o5JjrnSC6vELSe/fNjDXZRmAAX6hCCS+pbRWevzVTNgw/ETiu8/oPAIwwAJFIPkt48Fq5qKWSXwFf5H4bvHPaueklsm8FL+R/O4wq4gADNFrZlAIEr9Afl7L/KQxwXsIB0lvH6cWHcBY4Ghgky7x7WBarXOW1sTfSbhI+mJYlsb8pbkQzYgswxAn+Csw0LYADO68YEO4yzHK7PBmSwDjtD4iY2ak6WwW30nnaI1ERtydtq9Z/TBr0lqJlGnJwtUsz048ozUTKdGWladZBvA23HrpnrCTHcBIFwMw8amqN7SGogbOydLRPC7UjAb2ax1FFVyVtZ95Xa28jOj8rRBJmZuHm3lesp+oNRUJ+UJeXuZ938onCO/GOVEZd+TpZBE3b03XGoseWJi3j0XdwVintRbdmFOEi0XexjudaAs7IW4uysOi72XXKVIxvUgHbXiK6SxgvTwIjt1Edw+b0AMwwBnA03IiGNYDI2xwz7ZnWpfLDe953CbnbHyw+xY54i2LbPPN1t0N6uLviMIPDgIzbXTN5r1tTgdWyR3nWQMMt9UzFzZ5WiKHnOU7tvvlyk5ndcA/5JMzdAFXu+CWS3tcDgS+Kbes5wfAEFe8cnGz15nAn+WZdWwEPu+aTy7veqzfBvawzFWPXN/6ewLwE/lXGCuByS475MvLH2YT7Rcp8mEDcIMP7vj2FpRr8eON9rayG/iMT874+B6s04gertggX1OjDZhHdHHSKAB3xlz9RaiJncBtPjsSwitB+xHtKKz3FyTnD8A1wADf/Qjt5dCXEF2ef1mOv4kt8enMj4bkRGgBdN+ipQU4ErD0bwCtwCdD9SDkAEofyZwa/++3KwDpO4GHgI8BZ4e+/grg5DEAaAAejs8iHfJA+CNEtyl8H7iOaNdurbUCSDTeFUvTFEvkCpuIHi+dDQzVOiqAtMa5RDfjzSO6F6kZ2Fag6O3AE8C9QGN8IfB8rZMCyHuMAC4nuhvybqJbgluBp4CX4jMsHfFvjL3Avh5GV3y1tQN4DVhHtFtGK/AjYDFwI1APvE/zXvv4P5MTy2KaIoggAAAAAElFTkSuQmCC" />
+                    </defs>
+                </svg>
+                <div class="">
+                    YOU HAVE STILL 2 attempts! <br>SPIN AGAIN
+                </div>
+                <svg width="38" height="124" viewBox="0 0 38 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M17.247 122.782C18.2314 123.751 19.8143 123.737 20.7824 122.753L36.5592 106.711C37.5273 105.727 37.5142 104.144 36.5297 103.176C35.5453 102.207 33.9625 102.221 32.9943 103.205L18.9705 117.465L4.71104 103.441C3.72663 102.473 2.14377 102.486 1.17563 103.47C0.207488 104.455 0.220678 106.038 1.20509 107.006L17.247 122.782ZM15.5001 1.02083L16.5001 121.021L21.4999 120.979L20.4999 0.979168L15.5001 1.02083Z"
+                        fill="white" />
+                </svg>
+
+            </div>
+            <div class="start-info wins-info hidden">
+                <div>
+                    🎉 Congratulations! 🎉 <br>
+                    You have won 100,000 RS
+                    <br><br>
+                    To claim your prize:
+                </div>
+                <div style="text-align: start;">
+                    <span class="red-text">Step 1</span>:
+                    Click the "Get Money" button <br>
+                    <span class="red-text">Step 2</span>:
+                    Enter your phone number in the next step.
+                </div>
+                <div>
+                    <div style="font-size: 15px; color: #DC261B;">
+                        The window will close in:
+                    </div>
+                    <div id="timer">
+                        00:<span id="sec-timer">59</span>:<span id="m-sec-timer">99</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="header-game">
+            <span id="name-wins" class="name-wins anim">Ismail321 won <span class="green-text">343</span>$</span>
+            <span id="old-name" class="old-name-wins anim"><span class="green-text"></span></span>
+        </div>
+        <div class="container-game">
+            
+            <div class="red-text shadow-text">
+                YOU HAVE CHANCE TO <br> WIN 100.000 RS <br>Just SPIN And TRY YOUR LUCKY
+            </div>
+            <div class="wheel-container">
+                
+                <div class="button-container anim">
+                    <div class="button"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="footer-game">
+            <div id="attacment" class="shadow-text">
+                You have <span id="spin-count" class="red-text">3</span> attempts
+            </div>
+            <div class="btn">
+                SPIN
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
